@@ -6,7 +6,7 @@ if (isset($_SESSION['admin'])) {
     <script>
         function uploadfiles() {
             <?php
-            $user = $_GET['user'];
+            $user = $_GET["user"];
             $target_path = "../PastasUtilizadores/$user/";
             $path = "../PastasUtilizadores/$user/";
 
@@ -57,7 +57,7 @@ if (isset($_SESSION['admin'])) {
 
 
         <br>
-        <form onsubmit="uploadfiles()" id="uploadfile" enctype="multipart/form-data" action="../user/index.php" method="POST">
+        <form onsubmit="uploadfiles()" id="uploadfile" enctype="multipart/form-data" action="adminver.php?user=<?php echo $user; ?>" method="POST">
             <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
             <div class="input-group" style="max-width: 50%;margin-left: auto;margin-right: auto;">
                 <input name="uploadedfile" type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">

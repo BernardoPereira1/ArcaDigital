@@ -30,8 +30,9 @@
                                     <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password" required/>
                                 </div>
 
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button><br><br>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
                                 <button class="btn btn-primary btn-lg btn-block" onclick="window.location.href='create_account.php'" ;> Criar Conta</button>
+                                <button class="btn btn-success btn-lg btn-block" onclick="window.location.href='../user/public.php'" ;> Aceder à pasta publica</button>
 
                             </form>
                         </div>
