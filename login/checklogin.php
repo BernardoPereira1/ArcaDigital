@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "arcadigital";
+include('../config.php');
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -21,8 +18,9 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
   if ($user=="admin"){
         $_SESSION['admin'] = $_POST['user'];
-    header("location: ../admin/adminhome.php");
-  }else{
+        header("location: ../admin/adminhome.php");
+  } else {
+
     $_SESSION['user'] = $_POST['user'];
     header("location: ../user/index.php");
   }
