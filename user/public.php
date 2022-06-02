@@ -49,7 +49,11 @@ session_start();
     <div class="w3-teal">
         <img class="logo" src="../imagens/logo.png" alt="logo">
         <div class="w3-container">
-            <a href="../login/logout.php?logout=user">Logout</a>
+            <?php
+            if (isset($_SESSION['user']) && $_SESSION['user'] != "pastapublica") {
+            ?><a href="../login/logout.php?logout=user">Logout</a><?php
+                                                                } ?>
+
         </div>
     </div>
 
@@ -94,14 +98,15 @@ session_start();
                 </tbody>
             </table>
         <?php
-        }}
-        if (isset($_SESSION['user']) && $_SESSION['user'] != "pastapublica") {
+        }
+    }
+    if (isset($_SESSION['user']) && $_SESSION['user'] != "pastapublica") {
 
         ?>
-            <button style="position: static; margin-left:12.5%" class="btn btn-success btn-lg btn-block" onclick="window.location.href='../user/index.php'" ;>Voltar à pasta pessoal</button>
+        <button style="position: static; margin-left:12.5%" class="btn btn-success btn-lg btn-block" onclick="window.location.href='../user/index.php'" ;>Voltar à pasta pessoal</button>
     <?php
-        }
-    
+    }
+
     closedir($dh);
     ?>
 
