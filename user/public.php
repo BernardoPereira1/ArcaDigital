@@ -93,11 +93,18 @@ session_start();
                     </tr>
                 </tbody>
             </table>
+        <?php
+        }}
+        if (isset($_SESSION['user']) && $_SESSION['user'] != "pastapublica") {
+
+        ?>
+            <button style="position: static; margin-left:12.5%" class="btn btn-success btn-lg btn-block" onclick="window.location.href='../user/index.php'" ;>Voltar à pasta pessoal</button>
     <?php
         }
-    }
+    
     closedir($dh);
     ?>
+
 
 
 </body>

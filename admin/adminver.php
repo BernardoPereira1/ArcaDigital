@@ -103,6 +103,8 @@ if (isset($_SESSION['admin'])) {
         closedir($dh);
         ?>
 
+<button style="position: static; margin-left:12.5%" class="btn btn-success btn-lg btn-block" onclick="window.location.href='adminhome.php'" ;>Voltar à lista de pastas</button>
+
 
     </body>
 

@@ -96,12 +96,15 @@ if (isset($_SESSION['user'])) {
                         </tr>
                     </tbody>
                 </table>
+                
         <?php
             }
         }
         closedir($dh);
         ?>
 
+        <br>
+        <button style="position: static; margin-left:12.5%" class="btn btn-success btn-lg btn-block" onclick="window.location.href='public.php'" ;> Aceder à pasta publica</button>
 
     </body>
 
